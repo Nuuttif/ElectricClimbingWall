@@ -9,9 +9,6 @@ Leds are light up to visualize boulders on a climbing wall.
 
 User can set, browse and light up boulders from a GUI.
 
-
-## Installation
-
 ## Architecture: 
 ### [BoulderDataHandler](BoulderDataHandler.py)
 - Serializes and loads boulders from/to file.
@@ -29,4 +26,16 @@ User can set, browse and light up boulders from a GUI.
 - Sets the led-lights. 
 - Called by Grid.
 
-## Testing
+```mermaid
+graph TD
+
+A[User] -->|Interact| B[UI]
+
+B[UI] -->|Send command| C[GridHandler]
+
+C -->|Fetch Boulders| D[BoulderDataHandler]
+D -->|Return Boulders| C
+C -->|Set Grid| E[Grid]
+E -->|Call LedHandler| F[LedHandler]
+F -->|Light up leds| G[Hardware]
+```
