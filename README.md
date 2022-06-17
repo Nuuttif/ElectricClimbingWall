@@ -10,21 +10,27 @@ Leds are light up to visualize boulders on a climbing wall.
 User can set, browse and light up boulders from a GUI.
 
 ## Architecture: 
+
+### Ui 
+- Handles user interaction.
+- Sends commands to [GridHandler](GridHandler.py).
+
+### [GridHandler](GridHandler.py)
+- Handles the communication between Ui, [Grid](Grid) and [BoulderDataHandler](BoulderDataHandler.py).
+- Fetches boulders from [BoulderDataHandler](BoulderDataHandler.py).
+- Sets the state of the [Grid](Grid.py).
+
 ### [BoulderDataHandler](BoulderDataHandler.py)
 - Serializes and loads boulders from/to file.
 
-### [GridHandler](GridHandler.py) 
-- Handles the communication between BoulderDataHandler and Grid. 
-- Boulders are loaded into a list.
-- This class sets the state of the Grid.
 
 ### [Grid](Grid.py)
 - Defines the state of the board -> which leds are light up.
-- Sends state to LedHandler, which is the lowest level class communicating with leds.
+- Sends state to [LedHandler](LedHandler.py), which is the lowest level class communicating with leds.
 
 ### [LedHandler](LedHandler.py)
 - Sets the led-lights. 
-- Called by Grid.
+- Called by [Grid](Grid).
 
 ```mermaid
 graph TD
