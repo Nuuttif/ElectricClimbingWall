@@ -1,12 +1,13 @@
 # TODO:
 #   Implement this class
+#   Should handle communication between BoulderDataHandler and Grid
+#   BoulderDataHandler serializes and loads boulders
+#   GridHandler fetches boulders from BoulderDataHandler and sets the state of Grid
 class GridHandler:
-    # @var
-    # Class Grid
+    # @doc
+    # @var Class Grid
     def __init__(self, grid):
         self.grid = grid
 
-    # Not sure of implementation yet, array is hint for future implementation
-    # Maybe after figuring out boulder serialization etc implement this
-    def lightBoulder(self, array):
-        pass
+    def setBoulder(self):
+        self.grid.setLights(self.grid)

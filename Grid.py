@@ -1,3 +1,5 @@
+from LedHandler import LedHandler
+
 class Grid:
     def __init__(self):
         self.grid = self.createGrid()
@@ -22,6 +24,10 @@ class Grid:
     def lightClear(self, row=0, column=0):
         self.grid[row][column] = " "
 
-    # DEBUGGING FUNCTION
+    # Maybe Grid class is only for low level / creating boulders and GridHandler should handle this
+    def setLights(self, grid):
+        self.grid = grid
+
+    # DEBUG
     def printGrid(self):
         print(self.grid)
