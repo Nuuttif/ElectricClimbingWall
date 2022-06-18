@@ -14,6 +14,7 @@ User can set, browse and light up boulders from a GUI.
 ### Ui 
 - Handles user interaction.
 - Sends commands to [BoardHandler](BoardHandler.py).
+- Built with [Kivy](https://kivy.org/#home)
 
 ### [BoardHandler](BoardHandler.py)
 - Handles the communication between Ui, [Board](Board) and [BoulderDataHandler](BoulderDataHandler.py).
@@ -22,6 +23,7 @@ User can set, browse and light up boulders from a GUI.
 
 ### [BoulderDataHandler](BoulderDataHandler.py)
 - Serializes and loads boulders from/to file.
+- Uses [Pickle](https://docs.python.org/3/library/pickle.html) 
 
 
 ### [Board](Board.py)
@@ -45,3 +47,12 @@ C -->|Set Board| E[Board]
 E -->|Call LedHandler| F[LedHandler]
 F -->|Light up leds| G[Hardware]
 ```
+
+
+## Dependencies: 
+
+### Ui:
+- [Kivy](https://kivy.org/#home)
+
+### Serialization:
+- [Pickle](https://docs.python.org/3/library/pickle.html)  
