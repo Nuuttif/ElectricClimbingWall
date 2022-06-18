@@ -1,26 +1,26 @@
-from Grid import Grid
+from Board import Board
 from BoulderDataHandler import BoulderDataHandler
 # TODO:
 #   Implement this class
-#   Should handle communication between BoulderDataHandler and Grid
+#   Should handle communication between BoulderDataHandler and Board
 #   BoulderDataHandler serializes and loads boulders
-#   GridHandler fetches boulders from BoulderDataHandler and sets the state of Grid
+#   BoardHandler fetches boulders from BoulderDataHandler and sets the state of Board
 
 
-class GridHandler:
+class BoardHandler:
 
     # @doc
-    # @var Class Grid
+    # @var Class Board
     def __init__(self):
-        self.grid = Grid()
+        self.board = Board()
         self.boulderDataHandler = BoulderDataHandler()
 
         # @doc
-        # @var List [] -> Class Grid
+        # @var List [] -> Class Board
         self.boulders = []
 
     def setBoulder(self):
-        self.grid.setLights(self.grid)
+        self.board.setLights(self.board)
 
 
     # TODO:
@@ -32,4 +32,4 @@ class GridHandler:
             self.boulders = boulders
 
     # TODO:
-    #   Add a function for selecting a boulder from list of grids
+    #   Add a function for selecting a boulder from list of boards

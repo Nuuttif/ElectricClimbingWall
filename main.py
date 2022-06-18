@@ -1,7 +1,7 @@
-from Grid import Grid
-from GridHandler import GridHandler
+from Board import Board
+from BoardHandler import BoardHandler
 
 if __name__ == '__main__':
-    gridHandler = GridHandler()
-    gridHandler.grid.printGrid()
+    boardHandler = BoardHandler()
+    boardHandler.board.printBoard()
 

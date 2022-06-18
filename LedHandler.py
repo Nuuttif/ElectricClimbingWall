@@ -6,5 +6,5 @@ class LedHandler:
 
     # @doc
     # @var List[][]
-    def lightLeds(self, grid):
+    def lightLeds(self, board):
         pass

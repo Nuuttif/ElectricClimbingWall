@@ -10,6 +10,6 @@ class BoulderDataHandler:
 
     # @doc
     # var List [] -> Class Grid
-    def serializeBoulders(self, grids):
+    def serializeBoulders(self, boards):
         with open("boulders.pickle", "wb") as outfile:
-            pickle.dump(grids, outfile)
+            pickle.dump(boards, outfile)
