@@ -1,21 +1,14 @@
 from Board import Board
 from BoardHandler import BoardHandler
-import tkinter as tk
+from kivy.app import App
+from kivy.uix.button import Button
 
-class Application(tk.Frame):
-    def __init__(self, master=None):
-        tk.Frame.__init__(self, master)
-        self.grid()
-        self.createWidgets()
 
-    def createWidgets(self):
-        self.quitButton = tk.Button(self, text='Quit',
-            command=self.quit)
-        self.quitButton.grid()
+class TestApp(App):
+    def build(self):
+        return Button(text=" Hello Kivy World ")
 
-app = Application()
-app.master.title('Sample application')
-app.mainloop()
 
+TestApp().run()
 boardHandler = BoardHandler()
 boardHandler.board.printBoard()
