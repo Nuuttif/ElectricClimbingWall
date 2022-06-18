@@ -24,10 +24,6 @@ class Board:
     def lightClear(self, row=0, column=0):
         self.board[row][column] = " "
 
-    # Maybe Board class is only for low level / creating boulders and BoardHandler should handle this
-    def setLights(self, board):
-        self.board = board
-
     # DEBUG
     def printBoard(self):
         print(self.board)

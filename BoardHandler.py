@@ -22,7 +22,6 @@ class BoardHandler:
     def setBoulder(self):
         self.board.setLights(self.board)
 
-
     # TODO:
     #   Add functions to call BoulderDataHandel for:
     #   - Saving a new boulder
@@ -31,5 +30,13 @@ class BoardHandler:
         if boulders:
             self.boulders = boulders
 
+    def saveBoulders(self):
+        if self.boulders:
+            self.boulderDataHandler.serializeBoulders(self.boulders)
+
+    def addBoulder(self, board: Board):
+        self.boulders.append(board)
+        self.saveBoulders()
+
     # TODO:
-    #   Add a function for selecting a boulder from list of boards
+    #   Add a function for selecting a boulder self.boulders
