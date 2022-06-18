@@ -11,13 +11,13 @@ User can set, browse and light up boulders from a GUI.
 
 ## Architecture: 
 
-### Ui 
+### [Ui](Ui.py) 
 - Handles user interaction.
 - Sends commands to [BoardHandler](BoardHandler.py).
 - Built with [Kivy](https://kivy.org/#home)
 
 ### [BoardHandler](BoardHandler.py)
-- Handles the communication between Ui, [Board](Board) and [BoulderDataHandler](BoulderDataHandler.py).
+- Handles the communication between [Ui](Ui.py), [Board](Board) and [BoulderDataHandler](BoulderDataHandler.py).
 - Fetches boulders from [BoulderDataHandler](BoulderDataHandler.py).
 - Sets the state of the [Board](Board.py).
 
